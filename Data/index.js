@@ -19,7 +19,7 @@ bot.on('ready', () => {
     }
   })
 
-  function shuffle(array) {
+    function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
   
     // While there remain elements to shuffle...
@@ -40,5 +40,5 @@ bot.on('ready', () => {
     
   }
   
-
-bot.login(token);
+  // 
+  bot.login(process.env.TOKEN);
