@@ -33,6 +33,27 @@ bot.on('ready', () => {
   })
 
 
+ bot.on('message', msg => {
+    if (msg.content === '!money6s') {
+        if (msg.member.voice.channelID && msg.member.voice.channel.members.array().length == 6)
+        {
+          let membersArr = shuffle(msg.member.voice.channel.members.array());
+          membersArr.splice(0, 3).forEach(member => member.voice.setChannel("796738368134316043"));
+          membersArr.splice(-3).forEach(member => member.voice.setChannel("796738391340875834"));
+        }
+        msg.reply('Split into teams - Money');
+    }
+  })
+
+
+
+
+
+
+
+
+
+
 
     function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
