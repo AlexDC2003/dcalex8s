@@ -19,6 +19,21 @@ bot.on('ready', () => {
     }
   })
 
+
+  bot.on('message', msg => {
+    if (msg.content === '!start6s') {
+        if (msg.member.voice.channelID && msg.member.voice.channel.members.array().length == 6)
+        {
+          let membersArr = shuffle(msg.member.voice.channel.members.array());
+          membersArr.splice(0, 3).forEach(member => member.voice.setChannel("796736836105011211"));
+          membersArr.splice(-3).forEach(member => member.voice.setChannel("796736875100504064"));
+        }
+        msg.reply('Split into teams');
+    }
+  })
+
+
+
     function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
   
