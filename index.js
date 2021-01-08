@@ -5,7 +5,24 @@ const { prefix, token } = require('./config.json');
 
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag}!`);
+
   });
+
+client.on('message', message => {
+	if (message.content === '!ping') {
+		message.channel.send('Pong.');
+	}
+});
+
+
+
+
+
+///////////////////////////////////////
+
+
+
+
 
   bot.on('message', msg => {
     if (msg.content === '!start8s') {
