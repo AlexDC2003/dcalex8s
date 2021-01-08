@@ -12,8 +12,8 @@ bot.on('ready', () => {
         if (msg.member.voice.channelID && msg.member.voice.channel.members.array().length == 8)
         {
           let membersArr = shuffle(msg.member.voice.channel.members.array());
-          membersArr.splice(0, 4).forEach(member => member.voice.setChannel("759882250635968512"));
-          membersArr.splice(-4).forEach(member => member.voice.setChannel("759882318726430750"));
+          membersArr.splice(0, 4).forEach(member => member.voice.setChannel("796737230039023636"));
+          membersArr.splice(-4).forEach(member => member.voice.setChannel("796737272556552202"));
         }
         msg.reply('Split into teams - Viel Glück');
     }
