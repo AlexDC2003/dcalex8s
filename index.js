@@ -5,36 +5,15 @@ const { prefix, token } = require('./config.json');
 
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag}!`);
-
   });
-
-client.on('message', message => {
-	if (message.content === '!ping') {
-		message.channel.send('Pong.');
-	}
-});
-
-
-client.on('message', message => {
-	if (message.content === 'Optic') {
-    message.channel.send('Süßer');
-	}
-});
-
-
-///////////////////////////////////////
-
-
-
-
 
   bot.on('message', msg => {
     if (msg.content === '!start8s') {
         if (msg.member.voice.channelID && msg.member.voice.channel.members.array().length == 8)
         {
           let membersArr = shuffle(msg.member.voice.channel.members.array());
-          membersArr.splice(0, 4).forEach(member => member.voice.setChannel("796737230039023636"));
-          membersArr.splice(-4).forEach(member => member.voice.setChannel("796737272556552202"));
+          membersArr.splice(0, 4).forEach(member => member.voice.setChannel("759882250635968512"));
+          membersArr.splice(-4).forEach(member => member.voice.setChannel("759882318726430750"));
         }
         msg.reply('Split into teams');
     }
@@ -52,27 +31,6 @@ client.on('message', message => {
         msg.reply('Split into teams');
     }
   })
-
-
- bot.on('message', msg => {
-    if (msg.content === '!money6s') {
-        if (msg.member.voice.channelID && msg.member.voice.channel.members.array().length == 6)
-        {
-          let membersArr = shuffle(msg.member.voice.channel.members.array());
-          membersArr.splice(0, 3).forEach(member => member.voice.setChannel("796738368134316043"));
-          membersArr.splice(-3).forEach(member => member.voice.setChannel("796738391340875834"));
-        }
-        msg.reply('Split into teams - Money');
-    }
-  })
-
-
-
-
-
-
-
-
 
 
 
