@@ -49,7 +49,7 @@ bot.on('ready', () => {
 
  bot.on('message', msg => {
     if (msg.content === '!end6s') {
-        if (msg.member.voice.channelID && msg.member.voice.channel.members.array().length == 3)
+        
         {
     member.voice.setChannel(796736713442721812)
 
