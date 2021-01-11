@@ -44,6 +44,20 @@ bot.on('ready', () => {
     }
   })
 
+
+
+
+ bot.on('message', msg => {
+    if (msg.content === '!end6s') {
+        if (msg.member.voice.channelID && msg.member.voice.channel.members.array().length == 6)
+        {
+    member.voice.setChannel(796736713442721812)
+
+        }
+        msg.reply('Game beendet');
+    }
+  })
+
     function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
   
