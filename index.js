@@ -62,7 +62,7 @@ bot.on('ready', () => {
   bot.on('message' , msg => {
     if (msg.content ==='Thanos') {
  
-     msg.reply('Fucking gay');
+     msg.('Fucking gay');
 
     }
   })
