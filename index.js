@@ -58,6 +58,15 @@ bot.on('ready', () => {
     }
   })
 
+
+  bot.on('message' , msg => {
+    if (msg.content ==='Thanos') {
+ 
+     msg.reply('Fucking gay');
+
+    }
+  })
+
     function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
   
